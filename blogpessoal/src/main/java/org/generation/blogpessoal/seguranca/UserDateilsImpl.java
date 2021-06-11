@@ -1,6 +1,7 @@
 package org.generation.blogpessoal.seguranca;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.generation.blogpessoal.model.Usuario;
 import org.springframework.security.core.GrantedAuthority;
@@ -12,6 +13,7 @@ public class UserDateilsImpl implements UserDetails {
 	
 	private String userName;
 	private String password;
+	//private List<GrantedAuthority> authorities;
 	
 	public UserDateilsImpl (Usuario user) {
 		this.userName = user.getUsuario();
