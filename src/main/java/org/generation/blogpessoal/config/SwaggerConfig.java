@@ -20,9 +20,10 @@ public class SwaggerConfig {
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("org.generation.blogPessoal.controller"))
+				.apis(RequestHandlerSelectors.basePackage("org.generation.blogpessoal.controller"))
 				.paths(PathSelectors.any()).build().apiInfo(metadata()).useDefaultResponseMessages(false)
 				.globalResponses(HttpMethod.GET, responseMessageForGET());
+				
 	}
 
 	public static ApiInfo metadata() {
@@ -32,7 +33,7 @@ public class SwaggerConfig {
 	}
 
 	private static Contact contact() {
-		return new Contact("Rafael Queiróz", "https://github.com/rafaelq80", "rafaelproinfo@gmail.com");
+		return new Contact("Bruno Callachi", "https://github.com/brunocallachi", "brunocallachi@hotmail.com");
 	}
 
 	private static List<Response> responseMessageForGET() {
