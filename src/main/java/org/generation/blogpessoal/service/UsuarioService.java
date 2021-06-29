@@ -40,7 +40,10 @@ public class UsuarioService {
 				
 				user.get().setToken(authHeader);
 				user.get().setNome(usuario.get().getNome());
-				
+				user.get().setFoto(usuario.get().getFoto());
+				user.get().setTipo(usuario.get().getTipo());
+				user.get().setId(usuario.get().getTipo());
+				//inclusão do ID, qualquer tipo de erro relacionado ao ID, veridicar aqui e no UserLogin
 				return user;	
 								
 				}
